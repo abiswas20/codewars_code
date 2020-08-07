@@ -2,17 +2,16 @@
 
 def array_diff(a,b):
     """This function subtracts one list from another and return the result."""
-    c=set(b)
-    l=len(a)
-    i=0
-    while i<len(a):
-        if a[i] in c:
-            print(i)
-            a.pop(i)
-            i=i-1
-        i+=1
+    c=set(b)    #creates set from list b to boil it down to unique elements
+    l=len(a)    #we need to go over each element of list a
+    i=0     #setting counter i to 0
+    while i<len(a):     #looping through the entire list
+        if a[i] in c:   #checking is ith element in list b is in set c
+            a.pop(i)    #popping ith element of a if it is indeed in set c
+            i=i-1       #lowering i by 1 so the i+1th element in the original list a doesn't get overlooked
+        i+=1            #general counter for while loop
             
-    return a
+    return a            #return modified list a at the end of the function
 
 
 ##Tes##
