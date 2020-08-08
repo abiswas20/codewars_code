@@ -38,5 +38,3 @@ def int32_to_zip(int32):
 
     return ipv4
 
-
-print(int32_to_zip(0))
